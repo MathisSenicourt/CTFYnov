@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Création de post</title>
+	<link rel="stylesheet" type="text/css" href="../css/styleCreation.css">
+</head>
+<body>
+	<div>
+		<h1>Création d'un post</h1>
+		<form id="create-form" onsubmit="handleEvent(event)">
+			<label for="title">Titre du post:</label>
+			<input type="text" id="title" name="title" required>
+
+			<label for="content">Contenu du post:</label>
+			<input type="text" id="content" name="content" required>
+
+<!--            <label for="users">Votre utilisateur:</label>-->
+<!--            <select name="users" id="users-select">-->
+<!--                <option value="">Votre utilisateur</option>-->
+<!--                <option value="1">Antoine</option>-->
+<!--                <option value="7">Manon</option>-->
+<!--            </select>-->
+			<input type="submit" value="Création du post">
+		</form>
+	</div>
+    <script src="../js/creationPost.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+ul {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+  }
+  
+  li {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  li p {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
