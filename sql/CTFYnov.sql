@@ -87,9 +87,9 @@ CREATE TABLE `chatComments` (
 --
 
 INSERT INTO `chatComments` (`content`, `created_at`, `user_id`, `post_id`) VALUES
-('Réponse au post !', '2023-03-06 09:32:24', 1, 1),
-('Super blog !', '2023-03-06 09:36:53', 1, 1),
-('Suuuuuper', '0000-00-00 00:00:00', 1, 1);
+('Réponse au post !', '2023-03-06 09:32:24', 2, 1),
+('Super blog !', '2023-03-06 09:36:53', 2, 1),
+('Suuuuuper', '0000-00-00 00:00:00', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -110,9 +110,8 @@ CREATE TABLE `chatPosts` (
 --
 
 INSERT INTO `chatPosts` (`title`, `content`, `created_at`, `user_id`) VALUES
-('Test de post', 'Ceci est une test de post pour l\'interro de DEV API', '2023-03-06 09:17:29', 1),
-('Super', 'Super', '2023-03-06 09:53:40', 1),
-('Génial', 'Super Blog', '0000-00-00 00:00:00', 3);
+('Test de post', 'Ceci est une test de post pour le forum', '2023-03-06 09:17:29', 2),
+('Super', 'Super', '2023-03-06 09:53:40', 2);
 
 -- --------------------------------------------------------
 
@@ -134,9 +133,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`name`, `email`, `password`) VALUES
 ('Antoine', 'antoine.raimand@gmail.com', 'test'),
 ('Mathis', 'mathis.senicourt@gmail.com', 'test2'),
-('Thomas', 'thomas.cornu@gmail.com', 'test3'),
-('Axel', 'axel.carry@gmail.com', 'aaaaa'),
-('Alexis', 'alexis@gmail.com', 'fgdthdrth');
+('Thomas', 'thomas.cornu@gmail.com', 'test3');
 
 -- --------------------------------------------------------
 

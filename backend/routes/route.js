@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const users = require('../services/user');
-const posts = require('../services/post');
-const comments = require('../services/comment')
+const posts = require('../services/chatPost');
+const comments = require('../services/chatComment')
 
 /* Route le service 'Users' */
 router.get('/getUsers',  async function(req, res, next) {
@@ -53,7 +53,7 @@ router.delete('/deleteUser', async function(req, res, next) {
 /* Route pour le service 'Posts' */
 router.get('/getPosts',  async function(req, res, next) {
     try {
-      res.json(await posts.getPosts());
+      res.json(await posts.getChatPosts());
     } catch (err) {
       console.error(`Error while getting posts `, err.message);
       next(err);
@@ -62,16 +62,16 @@ router.get('/getPosts',  async function(req, res, next) {
 
 router.get('/getPost', async function(req, res, next) {
   try {
-    res.status(200).json(await posts.getPost(req.body));
+    res.status(200).json(await posts.getChatPost(req.body));
   } catch (err) {
     console.error(`Error while getting posts `, err.message);
     next(err);
   }
 });
 
-router.post('/createPost', async function(req, res, next) {
+router.post('/createChatPost', async function(req, res, next) {
   try {
-    res.json(await posts.createPost(req.body))
+    res.json(await posts.createChatPost(req.body))
   } catch (err) {
     console.error(`Error while creating post `, err.message);
     next(err);
@@ -80,7 +80,7 @@ router.post('/createPost', async function(req, res, next) {
 
 router.put('/updateUser', async function(req, res, next) {
     try {
-        res.json(await posts.editPost(req.body))
+        res.json(await posts.editChatPost(req.body))
     } catch (err) {
         console.error(`Error while updating posts `, err.message);
         next(err);
@@ -89,7 +89,7 @@ router.put('/updateUser', async function(req, res, next) {
 
 router.delete('/deletePost', async function(req, res, next) {
     try {
-        res.json(await posts.deletePost(req.body))
+        res.json(await posts.deleteChatPost(req.body))
     } catch (err) {
         console.error(`Error while deleting posts `, err.message);
         next(err);

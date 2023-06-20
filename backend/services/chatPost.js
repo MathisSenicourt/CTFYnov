@@ -4,9 +4,9 @@ const helper = require('../helper');
 const config = require('../config');
 
 /* Renvoie la liste des tous les posts */
-async function getPosts(){
+async function getChatPosts(){
   const rows = await db.query(
-    `SELECT * FROM posts`
+    `SELECT * FROM chatPosts`
     );
 
   const data = helper.emptyOrRows(rows);
@@ -17,9 +17,9 @@ async function getPosts(){
 }
 
 /* Renvoie un post en fonction des utilisateurs */
-async function getPost(post){
+async function getChatPost(post){
   const rows = await db.query(
-    `SELECT * from posts WHERE user_id="${(post.user_id)}"`
+    `SELECT * FROM chatPosts WHERE user_id="${(post.user_id)}"`
   );
 
   const data = helper.emptyOrRows(rows);
@@ -30,11 +30,11 @@ async function getPost(post){
 }
 
 /* Créer un post */
-async function createPost(post){
+async function createChatPost(post){
   const currentDate = new Date()
   const result = await db.query(
-    `INSERT INTO posts (id, title, content, created_at, user_id)
-    VALUES (4, '${post.title}', '${post.content}', '${currentDate}' , '${post.user_id}');`
+    `INSERT INTO chatPosts (title, content, created_at, user_id)
+    VALUES ('${post.title}', '${post.content}', '${currentDate}' , '${post.user_id}');`
   )
 
   let message = 'Error in creating Post';
@@ -47,9 +47,9 @@ async function createPost(post){
 }
 
 /* Edite un post */
-async function editPost(post){
+async function editChatPost(post){
   const result = await db.query(
-    `UPDATE posts SET title="${post.title}", content="${post.content}" WHERE id=${post.id}`
+    `UPDATE chatPosts SET title="${post.title}", content="${post.content}" WHERE id=${post.id}`
   );
 
   let message = 'Error in updating post';
@@ -62,9 +62,9 @@ async function editPost(post){
 }
 
 /* Supprime un post */
-async function deletePost(post){
+async function deleteChatPost(post){
   const result = db.query(
-    `DELETE FROM posts WHERE id = ${post.id}`
+    `DELETE FROM chatPosts WHERE id = ${post.id}`
   )
 
   let message = 'Error in deleting post';
@@ -78,9 +78,9 @@ async function deletePost(post){
 
 
 module.exports = {
-    getPosts,
-    getPost,
-    createPost,
-    editPost,
-    deletePost
+    getChatPosts: getChatPosts,
+    getChatPost: getChatPost,
+    createChatPost: createChatPost,
+    editChatPost: editChatPost,
+    deleteChatPost: deleteChatPost
 }

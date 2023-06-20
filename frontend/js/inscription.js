@@ -16,7 +16,7 @@ function handleSubmit(event) {
 	.then(data => {
 	  if (data.message === 'User created successfully') {
 		setTimeout(() => {
-		  window.location.href = 'index.html';
+		  window.location.href = 'forum.html';
 		}, 3000); // délai de 3 secondes
 	  } else {
 		alert('Erreur lors de la création de l\'utilisateur');

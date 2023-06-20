@@ -22,7 +22,7 @@ form.addEventListener('submit', (event) => {
 	.then(data => {
 		if (data.data.length > 0) {
 			sessionStorage.setItem('nom', data.data[0].name);
-			window.location.href = 'index.html';
+			window.location.href = 'forum.html';
 		} else {
 			alert('Email ou mot de passe incorrect');
 		}
