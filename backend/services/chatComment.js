@@ -31,10 +31,9 @@ async function getComment(comment){
 
 /* Créer un comment */
 async function createComment(comment){
-  const currentDate = new Date()
   const result = await db.query(
     `INSERT INTO comments (id, content, created_at, user_id, post_id)
-    VALUES (3, '${comment.content}', CURRENT_TIMESTAMP, '${comment.user_id}' , '${comment.post_id}');`
+    VALUES (3, '${comment.content}', 'NOW()', '${comment.user_id}' , '${comment.post_id}');`
   )
 
   let message = 'Error in creating comment';
