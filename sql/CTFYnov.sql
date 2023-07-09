@@ -17,12 +17,16 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `boxs` (
                         `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
                         `title` text NOT NULL,
-                        `correctFlag` text NOT NULL,
+                        `correctFlag` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `boxs` (`title`, `correctFlag`) VALUES
-                                                ('box1', 'correctFLagValue'),
-                                                ('box2', 'correctFLagValue');
+                                                ('IntrusionBDD', 'correctFLagValue'),
+                                                ('EscaladePrivilege', 'Fl@G is {You''re_G0d}'),
+                                                ('MemoryForensicxVolatilityQ1', 'Win7SP1x64'),
+                                                ('MemoryForensicxVolatilityQ2', 'goodmorningindia'),
+                                                ('MemoryForensicxVolatilityQ3', 'flag{w3ll_3rd_stage_was_easy}'),
+                                                ('WiresharkFlagFinder', 'FLAG{W1r3Extr4ct}');
 
 -- --------------------------------------------------------
 --

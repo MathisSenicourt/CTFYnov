@@ -3,6 +3,7 @@ const router = express.Router();
 const users = require('../services/user');
 const posts = require('../services/chatPost');
 const comments = require('../services/chatComment')
+const boxs = require("../services/boxs");
 
 /* Route le service 'Users' */
 router.get('/getUsers',  async function(req, res, next) {
@@ -138,6 +139,15 @@ router.delete('/deleteComment', async function(req, res, next) {
         res.json(await comments.deleteComment(req.body))
     } catch (err) {
         console.error(`Error while deleting comments `, err.message);
+        next(err);
+    }
+});
+
+router.post('/getFlag', async function(req, res, next) {
+    try {
+        res.json(await boxs.getFlag(req.body));
+    } catch (err) {
+        console.error(`Error while getting users `, err.message);
         next(err);
     }
 });
