@@ -7,7 +7,8 @@ fetch(url)
     const postsList = document.getElementById("posts-list");
     for (let post of data.data) {
       const listItem = document.createElement("div");
-      listItem.innerHTML = `<div class="card blue"><strong>${post.title}</strong><br>${post.content}<br>Posté par ${post.user_id}<br><br></div>`;
+      console.log(post)
+      listItem.innerHTML = `<div class="card blue"><strong>${post.title}</strong><br>${post.content}<br>Posté par ${post.name}<br><br></div>`;
       postsList.appendChild(listItem);
     }
   })

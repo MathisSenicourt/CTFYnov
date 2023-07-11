@@ -128,7 +128,7 @@ a {
 .form input {
     height: 35px;
     outline: none;
-    border: 2px solid #0EF6CC;
+    border: 2px solid #066252;
     background: transparent;
     padding: 20px 10px;
     border-radius: 5px;
@@ -138,7 +138,7 @@ a {
 }
 
 .form input:focus {
-    background: #0EF6CC;
+    background: #066252;
 }
 
 .form button {
@@ -150,7 +150,7 @@ a {
     border: none;
     height: 45px;
     border-radius: 5px;
-    background: #0EF6CC;
+    background: #066252;
     align-self: flex-end;
 }
 

@@ -6,7 +6,7 @@ const config = require('../config');
 /* Renvoie la liste des tous les posts */
 async function getChatPosts(){
   const rows = await db.query(
-    `SELECT * FROM chatPosts`
+    `SELECT chatPosts.*, users.name FROM chatPosts JOIN users ON chatPosts.user_id = users.id`
     );
 
   const data = helper.emptyOrRows(rows);

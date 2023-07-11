@@ -3,6 +3,10 @@ body {
   color: #F4FEFD;
 }
 
+strong {
+  text-transform: uppercase;
+}
+
 .title {
   text-align: center;
   font-size: 50px;
@@ -19,14 +23,10 @@ a {
   align-items: center;
   gap: 25px;
   font-size: 20px;
-
-  -webkit-text-stroke: 0.2px black; /* bordure avec la propriété text-stroke pour les navigateurs WebKit (Safari, Chrome) */
-  text-stroke: 0.2px black; /* bordure avec la propriété text-stroke pour les navigateurs compatibles */
-  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; /* bordure de repli avec la propriété text-shadow */
 }
 
 .cards .blue {
-  background-color: #0EF6CC;
+  background-color: #066252;
 }
 
 .cards .card {

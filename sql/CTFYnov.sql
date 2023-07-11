@@ -21,7 +21,7 @@ CREATE TABLE `boxs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `boxs` (`title`, `correctFlag`) VALUES
-                                                ('IntrusionBDD', 'correctFLagValue'),
+                                                ('IntrusionBDD', 'welcomeAfrica'),
                                                 ('EscaladePrivilege', 'Fl@G is {You''re_G0d}'),
                                                 ('MemoryForensicxVolatilityQ1', 'Win7SP1x64'),
                                                 ('MemoryForensicxVolatilityQ2', 'goodmorningindia'),

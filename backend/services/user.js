@@ -19,7 +19,7 @@ async function getUsers(){
 /* Renvoie un utilisateur */
 async function getUser(user){
   const rows = await db.query(
-    `SELECT * from users WHERE Email="${(user.email)}" and Password="${user.password}"`
+    `SELECT * from users WHERE Email="${(await user.email.encrypt())}" and Password="${user.password}"`
   );
   const data = helper.emptyOrRows(rows);
   
@@ -32,7 +32,7 @@ async function getUser(user){
 async function createUser(user){
   const result = await db.query(
     `INSERT INTO users (id, name, email, password)
-    VALUES (8, '${user.name}', '${user.email}', '${user.password}');`
+    VALUES (8, '${user.name}', '${await user.email.encrypt()}', '${user.password}');`
   )
 
   let message = 'Error in creating user';
