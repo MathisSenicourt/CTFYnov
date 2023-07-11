@@ -19,7 +19,7 @@ function handleSubmit(event) {
 		  window.location.href = 'index.html';
 		}, 3000); // délai de 3 secondes
 	  } else {
-		alert('Erreur lors de la création de l\'utilisateur');
+		alert('Erreur lors de la creation de l\'utilisateur');
 	  }
 	})
 	.catch(error => console.error(error));
