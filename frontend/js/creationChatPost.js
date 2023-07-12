@@ -7,7 +7,7 @@ function handleEvent(event) {
         title: document.getElementById("title").value,
         content: document.getElementById("content").value,
         currentDate : currentDate,
-        user_id: '2' //sessionStorage.getItem('nom') //TODO from nom get id
+        user_id: '2'
     }
     fetch('http://localhost:3000/api/createChatPost', {
         method: 'POST',

@@ -59,8 +59,8 @@ CREATE TABLE `chatPosts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `chatPosts` (`title`, `content`, `created_at`, `user_id`) VALUES
-                                                                          ('Test de post', 'Ceci est une test de post pour le forum', '2023-03-06 09:17:29', 2),
-                                                                          ('Super', 'Super', '2023-03-06 09:53:40', 2);
+                                                                          ('Box 1', 'Hello j ai besoins d aide pour la box 1', '2023-03-06 09:17:29', 2),
+                                                                          ('Box 1', 'Comment je peux t aider ?', '2023-03-06 09:53:40', 2);
 
 -- --------------------------------------------------------
 --
